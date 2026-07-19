@@ -1,0 +1,20 @@
+/*
+Business Scenario
+
+The Sales Director wants to compare the performance of individual salespeople and understand their contribution to overall sales.
+
+Business Question
+
+Which salespeople generated the highest total sales revenue, and how many orders did each salesperson handle?
+*/
+
+SELECT sales.salesperson.BusinessEntityID, CONCAT(person.person.FirstName, ' ', person.person.MiddleName, ' ', person.person.LastName) 
+    AS "SalesPerson", sales.SalesPerson.SalesYTD AS "TotalSales", COUNT(sales.SalesOrderHeader.SalesOrderID) AS "SalesCount"
+FROM sales.SalesPerson
+INNER JOIN person.Person
+    ON sales.salesperson.BusinessEntityID = person.person.BusinessEntityID
+INNER JOIN sales.SalesOrderHeader
+    ON person.person.BusinessEntityID = Sales.SalesOrderHeader.SalesPersonID
+GROUP BY sales.salesperson.BusinessEntityID, person.person.FirstName, person.person.MiddleName, person.person.LastName, sales.SalesPerson.SalesYTD
+ORDER BY TotalSales DESC;
+
