@@ -56,6 +56,10 @@ The `SalesYTD` column in `Sales.SalesTerritory` is considered a trusted business
 
 The analysis identifies the best-performing sales territories based on Year-to-Date sales, helping management quickly understand regional sales performance.
 
+### Result
+
+![Revenue by Territory](images/01_revenue_by_territory.png)
+
 ## Case Study 2 – Best Selling Products
 
 ### Business Question
@@ -82,6 +86,10 @@ There is no trusted pre-calculated revenue metric available at the product level
 ### Business Insight
 
 The analysis identifies the products generating the highest total sales revenue, providing insight into which products contribute the most to overall sales performance.
+
+### Result
+
+![Best Selling Products](images/02_best_selling_products.png)
 
 ## Case Study 3 – Sales Performance by Salesperson
 
@@ -111,3 +119,7 @@ The `SalesYTD` metric in `Sales.SalesPerson` is considered a trusted measure of 
 ### Business Insight
 
 The analysis compares individual salesperson performance based on Year-to-Date sales and the number of orders handled, providing management with a view of both sales value and sales activity.
+
+### Result
+
+![Sales Performance by Salesperson](images/03_sales_performance_by_salesperson.png)
