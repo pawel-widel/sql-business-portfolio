@@ -64,3 +64,35 @@ The analysis identifies the most active customers based on the number of sales o
 ### Result
 
 ![Customer Order Frequency](images/02_customer_order_frequency.png)
+
+## Case Study 3 – Average Order Value by Customer
+
+### Business Question
+
+Which individual customers have the highest average sales order value?
+
+### Business Assumption
+
+The analysis includes individual customers only. The average order value is calculated using the total value of each sales order.
+
+### Data Sources
+
+- `Sales.Customer`
+- `Sales.SalesOrderHeader`
+- `Person.Person`
+
+### SQL Concepts
+
+- SELECT
+- JOIN
+- AVG
+- GROUP BY
+- ORDER BY
+
+### Business Insight
+
+The analysis identifies customers with the highest average sales order value, helping the business distinguish high-value customers from those who place frequent but smaller orders.
+
+### Result
+
+![Average Order Value by Customer](images/03_average_order_value_by_customer.png)
